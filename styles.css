@@ -16,71 +16,62 @@ header {
     padding: 20px;
     text-align: center;
     font-family: "Concert One", sans-serif;
-    
 }
 
-header .logo img{
+.logo {
     display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: flex-end;
-}
-
-.logo nav{
-    align-items: center;
-}
-
-.logo nav .navElements {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.logo nav .navElements li {
-    margin: 0 15px;
-}
-
-.logo nav .navElements li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.logo nav .navElements li a:hover {
-    text-decoration: underline;
-}
-
-.concert-one-regular {
-    font-family: "Concert One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-.logo nav .navSocials {
-    list-style-type: none;
+.logo nav {
     display: flex;
-    flex-direction: row;
-    justify-content: right;
+    justify-content: space-between; /* Ensures even spacing between elements */
+    align-items: center;
+    width: 100%; /* Adjust to your preferred width */
+    max-width: 1200px; /* Optional to limit width */
+    margin: 0 auto; /* Centers the nav content */
+}
+
+.logo img {
+    margin-right: 20px;
+}
+
+.navElements, .navSocials {
+    display: flex;
+    list-style: none;
     align-items: center;
 }
 
-.logo nav .navSocials li {
+.navElements {
+    justify-content: center; /* Center the navigation links */
+}
+
+.navElements li {
     margin: 0 15px;
 }
 
-.logo nav .navSocials li a {
+.navElements li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
 }
 
-.logo nav .navSocials li a:hover {
+.navElements li a:hover {
     text-decoration: underline;
 }
 
-.concert-one-regular {
-    font-family: "Concert One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+.navSocials {
+    justify-content: flex-end; /* Aligns the social media icons to the right */
+}
+
+.navSocials li {
+    margin: 0 10px;
+}
+
+.navSocials li a {
+    color: #fff;
+    text-decoration: none;
+}
+
