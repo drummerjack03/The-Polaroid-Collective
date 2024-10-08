@@ -7,105 +7,80 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: #000000;
 }
 
 header {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 20px;
     text-align: center;
+    font-family: "Concert One", sans-serif;
+    
 }
 
-header .logo h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+header .logo img{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-end;
 }
 
-nav ul {
+.logo nav{
+    align-items: center;
+}
+
+.logo nav .navElements {
     list-style-type: none;
     display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
-nav ul li {
+.logo nav .navElements li {
     margin: 0 15px;
 }
 
-nav ul li a {
+.logo nav .navElements li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
 }
 
-nav ul li a:hover {
+.logo nav .navElements li a:hover {
     text-decoration: underline;
 }
 
-#hero {
-    background: url('band_photo.jpg') no-repeat center center/cover;
-    height: 80vh;
+.concert-one-regular {
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.logo nav .navSocials {
+    list-style-type: none;
     display: flex;
+    flex-direction: row;
+    justify-content: right;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
 }
 
-#hero h2 {
-    font-size: 3em;
-    margin-bottom: 10px;
+.logo nav .navSocials li {
+    margin: 0 15px;
 }
 
-#hero p {
-    font-size: 1.5em;
-}
-
-main {
-    padding: 50px 20px;
-}
-
-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-section p, section ul {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-ul {
-    list-style-type: none;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-footer ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-footer ul li {
-    margin: 0 10px;
-}
-
-footer ul li a {
+.logo nav .navSocials li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.2em;
 }
 
-footer ul li a:hover {
+.logo nav .navSocials li a:hover {
     text-decoration: underline;
 }
+
+.concert-one-regular {
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
