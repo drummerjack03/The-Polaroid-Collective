@@ -75,3 +75,16 @@ header {
     text-decoration: none;
 }
 
+.middleSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.largeText{
+    padding-left: 50px;
+    font-size: 5em;
+    font-family: "Dela Gothic One", sans-serif;
+    
+      
+      
+}
