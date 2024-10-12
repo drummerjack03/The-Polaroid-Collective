@@ -5,41 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Polaroid Collective</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
     <header>
         <div class="navbar">
             <nav>
                 <img src="images/logoPlaceholder.png" alt="Polaroid Collective Logo" width="100px" height="auto">
-                <ul class="navElements">
+                <div class="hamburger" id="hamburger">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <ul class="navElements" id="menuList">
                     <li><a href="#music">Music</a></li>
                     <li><a href="#merch">Merch</a></li>
                     <li><a href="#shows">Upcoming Events</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
-
                 <ul class="navSocials">
                     <li><a href="https://www.instagram.com/thepolaroidcollectiveband/"><img src="images/SocialMediaLogos/InstaLogo.png" alt="Instagram" width="50px" height="auto"></a></li>
                     <li><a href="#"><img src="images/SocialMediaLogos/TikTokLogo.png" alt="TikTok" width="50px" height="auto"></a></li>
                     <li><a href="#"><img src="images/MusicLogos/itunes.png" alt="Apple Music/iTunes" width="50px" height="auto"></a></li>
                     <li><a href="#"><img src="images/MusicLogos/spotify.png" alt="Spotify" width="50px" height="auto"></a></li>
-
-
                 </ul>
             </nav>
         </div>
     </header>
     <main>
+
         <div class= "middleSection">
             <h1 class="largeText">THE POLAROID <br> COLLECTIVE</h1>
 
             <video class = "montageVideo" autoplay loop muted src="videos/Montage.mov"></video>
         </div>
+        
         <div class="whoareWe">
             <h2 class="sectionTitle"> WHO ARE WE?</h2>
             <p>The Polaroid Collective is a band located in the city of Jacksonville Alabama. Formed in 2024, we are happy and excited to share our love of music through various different covers and original songs</p>
         </div>
+        
         <div id="shows">
             <h2 class="sectionTitle">UPCOMING EVENTS:</h2>
             
@@ -70,12 +72,18 @@
     <footer>
         <p class="copyRight">&copy; 2024 The Polaroid Collective. All rights reserved.</p>
         <ul class="footSocials">
-            <li><a href="https://www.instagram.com/thepolaroidcollectiveband/"><img src="images/SocialMediaLogos/InstaLogo.png" alt="Instagram" width="50px" height="auto"></a></li>
-            <li><a href="#music"><img src="images/SocialMediaLogos/TikTokLogo.png" alt="TikTok" width="50px" height="auto"></a></li>
-            <li><a href="https://www.apple.com/apple-music/"><img src="images/MusicLogos/itunes.png" alt="Apple Music/iTunes" width="50px" height="auto"></a></li>
-            <li><a href="https://www.spotify.com/us/premium/"><img src="images/MusicLogos/spotify.png" alt="Spotify" width="50px" height="auto"></a></li>
+            <li><a href="https://www.instagram.com/thepolaroidcollectiveband/"><img src="images/SocialMediaLogos/InstaLogo.png" alt="Instagram" width="20px" height="auto"></a></li>
+            <li><a href="#music"><img src="images/SocialMediaLogos/TikTokLogo.png" alt="TikTok" width="20px" height="auto"></a></li>
+            <li><a href="https://www.apple.com/apple-music/"><img src="images/MusicLogos/itunes.png" alt="Apple Music/iTunes" width="20px" height="auto"></a></li>
+            <li><a href="https://www.spotify.com/us/premium/"><img src="images/MusicLogos/spotify.png" alt="Spotify" width="20px" height="auto"></a></li>
         </ul>
         
     </footer>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const menuList = document.getElementById('menuList');
+            menuList.classList.toggle('active'); // Toggle the 'active' class
+        });
+    </script>
 </body>
 </html>
