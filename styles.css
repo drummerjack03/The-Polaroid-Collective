@@ -121,7 +121,7 @@ header {
     flex-direction: column;
     align-items: center;
 }
-.whoAre{
+.sectionTitle{
     color: #ffffff;
     font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -130,7 +130,7 @@ header {
   text-decoration: underline;
 } 
 .whoareWe p{
-    color: #ffffff;
+    color: #dfdfdf;
     font-size: 30px;
     max-width: 800px;
     font-family: "Abel", sans-serif;
@@ -138,4 +138,55 @@ header {
     font-style: normal;
     text-align: center;
 }
+#shows{
+    background-color: #000000;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.event {
+    background-color: #dfdfdf; /* Background for the entire event container */
+    display: flex;
+    flex-direction: row;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 80px; /* Increased height */
+    width: 30%; /* Increased width */
+    max-width: 1200px; /* Optional maximum width */
+    margin: 0 auto; /* Center the container horizontally */
+    border-radius: 10px;
+}
 
+.lSide {
+    color: #ffffff;
+    background-color: #3f3f3f;
+    width: 20%; /* Adjust the width as needed */
+    height: 100%; /* Fill the height of the event container */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 20px;
+    border-top-left-radius: 10px; /* Rounded top-left corner */
+    border-bottom-left-radius: 10px; /* Rounded bottom-left corner */
+}
+
+.rSide {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 20px;
+}
+
+.eventType {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-style: normal;
+}
+
+.eventTitle {
+    color: rgb(39, 39, 39);
+    font-weight: bold;
+    font-style: normal;
+}
