@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +10,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #000000;
     color: #000000;
     padding-top: 100px; /* Adjust based on the height of your header */
 }
@@ -55,11 +56,11 @@ header {
     justify-content: center; 
 }
 
-.navElements li {
-    margin: 0 15px;
+.navElements li, .navSocials li {
+    margin: 0 15px; /* Use margin for navElements and margin for navSocials */
 }
 
-.navElements li a {
+.navElements li a, .navSocials li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
@@ -69,27 +70,14 @@ header {
     text-decoration: underline;
 }
 
-.navSocials {
-    justify-content: flex-end; 
-}
-
-.navSocials li {
-    margin: 0 3px;
-}
-
-.navSocials li a {
-    color: #fff;
-    text-decoration: none;
-}
-
 .middleSection {
     display: flex;
     flex-direction: row;
     justify-content: left;
     background-color: #000000;
 }
-.largeText {
 
+.largeText {
     padding: 100px 0 100px 200px;
     font-size: 5em;
     font-family: "Dela Gothic One", sans-serif;
@@ -107,63 +95,58 @@ header {
     100% { background-position: 0% 50%; }
 }
 
-.montageVideo{
+.montageVideo {
     margin: 0;
-    padding: 0 0 0 200px;
-    box-sizing: border-box;
+    padding-left: 200px;
     width: 600px;
     height: auto;
 }
-.whoareWe{
+
+.whoareWe {
     background-color: #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.sectionTitle{
+
+.sectionTitle {
     color: #ffffff;
     font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 80px;
-  text-decoration: underline;
+    font-size: 80px;
+    text-decoration: underline;
 } 
-.whoareWe p{
+
+.whoareWe p {
     color: #dfdfdf;
     font-size: 30px;
     max-width: 800px;
     font-family: "Abel", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     text-align: center;
 }
-#shows{
+
+#shows {
     background-color: #000000;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0; /* Combined padding */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .event {
-    background-color: #dfdfdf; /* Background for the entire event container */
+    background-color: #dfdfdf;
     display: flex;
     flex-direction: row;
     font-family: "Abel", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     height: 80px; 
-    width: 30%; 
-    max-width: 1200px; /* Optional maximum width */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 30%;
+    max-width: 1200px;
+    margin: 0 auto 20px; /* Combined margin */
     border-radius: 10px;
-    margin-bottom: 20px;
-    text-decoration: none; /* Remove underline from the link */
-    color: inherit; /* Inherit text color from the parent (event container) */
+    text-decoration: none;
+    color: inherit;
 }
 
 .event:hover {
-    /* Add a hover effect for the clickable area */
     background-color: #cccccc; /* Change background color on hover */
 }
 
@@ -171,14 +154,12 @@ header {
     color: #ffffff;
     background-color: #3f3f3f;
     width: 20%; 
-    height: 100%; 
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
     padding: 20px;
-    border-top-left-radius: 10px; /* Rounded top-left corner */
-    border-bottom-left-radius: 10px; /* Rounded bottom-left corner */
+    border-radius: 10px 0 0 10px; /* Combined border radius */
 }
 
 .rSide {
@@ -188,48 +169,186 @@ header {
     padding: 20px;
 }
 
+.eventType, .eventTitle {
+    font-weight: bold;
+}
+
 .eventType {
     color: rgb(255, 0, 0);
-    font-weight: bold;
-    font-style: normal;
 }
 
 .eventTitle {
     color: rgb(39, 39, 39);
-    font-weight: bold;
-    font-style: normal;
 }
-footer{
+
+footer {
     background-color: #0a0a0a;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding: 30px 0 10px; /* Combined padding */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.copyRight{
+
+.copyRight {
     color: #dfdfdf;
     font-family: "Abel", sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
+
 .footSocials {
-    justify-content: flex-end; 
+    justify-content: center;
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     padding-top: 20px;
 }
 
 .footSocials li {
     margin: 0 3px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0 5px; /* Combined padding */
 }
 
 .footSocials li a {
     color: #fff;
     text-decoration: none;
 }
+@media (max-width: 1500px) {
+.montageVideo {
+    display: none; /* Hides the video on mobile devices */
+}
+.largeText{
+    text-align: center; /* Center the text */
+    font-size: 275%; /* Adjusted font size for mobile */
+    padding: 3px;
+    margin: 0 auto; /* Center the element horizontally */
 
+    font-family: "Dela Gothic One", sans-serif;
+    background: linear-gradient(270deg, #ff69b4, #8a2be2, #da70d6); /* Pink and purple gradient */
+    background-size: 300% 300%; /* Adjust size for smooth animation */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: backgroundAnimate 8s ease infinite; /* Animation applied */
+}
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .event {
+        flex-direction: column; /* Stack the content vertically */
+        height: auto; /* Allow height to adjust based on content */
+        width: 90%; /* Increase width for better mobile layout */
+    }
+
+    .lSide {
+        width: 100%; /* Full width for mobile */
+        border-radius: 10px; /* Rounded corners for mobile */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .rSide {
+        width: 100%; /* Full width for mobile */
+        padding: 10px; /* Adjust padding */
+        align-items: center; /* Center-align the text on mobile */
+    }
+
+    .eventType, .eventTitle {
+        text-align: center; /* Center text on mobile for better readability */
+    }
+
+    .eventTitle {
+        font-size: 1.2em; /* Slightly smaller font for mobile */
+    }
+
+    .sectionTitle {
+        text-align: center;
+    }
+
+    .whoareWe p {
+        width: 75vw;
+    }
+
+    .navbar .navSocials {
+        display: none;
+    }
+
+    .navElements {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Overlay the menu */
+        top: 100px; /* Below the header */
+        right: 0; /* Align to the right */
+        background-color: #111; /* Background color for dropdown */
+        width: 100%; /* Full width for mobile */
+        z-index: 999; /* Ensure it's above other elements */
+    }
+
+    .navElements li {
+        margin: 20px 0; /* Add spacing between menu items */
+    }
+
+    .navElements li a {
+        font-size: 1.5em; /* Larger font for mobile */
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+        display: block; /* Make links take full width */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+        background-color: transparent; /* Transparent background */
+        border: none; /* Remove border */
+        color: white; /* Hamburger icon color */
+        font-size: 2em; /* Size of the hamburger icon */
+        padding: 10px 15px; /* Add padding to the hamburger */
+        cursor: pointer; /* Change cursor to pointer on hover */
+    }
+
+    .navElements.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .navElements li {
+        margin: 0; /* Remove margin for better alignment */
+        padding: 10px 0; /* Increase vertical padding */
+        position: relative; /* Set position for the line */
+    }
+    
+    /* Add a pseudo-element for the bottom line */
+    .navElements li::after {
+        content: ""; /* Create a pseudo-element */
+        display: block; /* Display as block */
+        width: 100%; /* Make it full width */
+        height: 2px; /* Height of the line */
+        background-color: white; /* Color of the line */
+        position: absolute; /* Position it at the bottom */
+        left: 0; /* Align to the left */
+        bottom: 0; /* Align to the bottom */
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s; /* Transition for fade effect */
+    }
+
+    .navElements li:hover::after {
+        opacity: 1; /* Fade in the line on hover */
+    }
+    .middleSection{
+        justify-content: center;
+    }
+    .largeText{
+        text-align: center; /* Center the text */
+        font-size: 200%; /* Adjusted font size for mobile */
+        padding: 3px;
+        font-family: "Dela Gothic One", sans-serif;
+        background: linear-gradient(270deg, #ff69b4, #8a2be2, #da70d6); /* Pink and purple gradient */
+        background-size: 300% 300%; /* Adjust size for smooth animation */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: backgroundAnimate 8s ease infinite; /* Animation applied */
+    }
+
+}
+/* Make the hamburger icon invisible on wider screens */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* Hide hamburger icon on larger screens */
+    }
+}
