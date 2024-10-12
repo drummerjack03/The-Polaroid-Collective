@@ -8,24 +8,28 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #000000;
+    padding-top: 100px; /* Adjust based on the height of your header */
 }
 
 header {
-    background-color: #000000;
+    background-color: #111111;
     color: #fff;
-    padding: 20px;
     text-align: center;
     font-family: "Concert One", sans-serif;
+    position: fixed; /* Makes the header fixed */
+    top: 0; /* Stays at the top of the viewport */
+    width: 100%; /* Ensures the navbar takes up the full width */
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
 }
 
-.logo {
+.navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.logo nav {
+.navbar nav {
     display: flex;
     justify-content: space-between; /* Ensures even spacing between elements */
     align-items: center;
@@ -34,7 +38,7 @@ header {
     margin: 0 auto; /* Centers the nav content */
 }
 
-.logo img {
+.navbar img {
     margin-right: 20px;
 }
 
@@ -67,7 +71,7 @@ header {
 }
 
 .navSocials li {
-    margin: 0 10px;
+    margin: 0 3px;
 }
 
 .navSocials li a {
@@ -79,12 +83,24 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: left;
+    background-color: #000000;
 }
-.largeText{
-    padding-left: 50px;
+.largeText {
+
+    padding: 100px 0 100px 200px;
     font-size: 5em;
     font-family: "Dela Gothic One", sans-serif;
-    
-      
-      
+    background: linear-gradient(270deg, #ff69b4, #8a2be2, #da70d6); /* Pink and purple gradient */
+    background-size: 300% 300%; /* Adjust size for smooth animation */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: backgroundAnimate 8s ease infinite; /* Animation applied */
 }
+
+/* Keyframes to animate the background colors */
+@keyframes backgroundAnimate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
