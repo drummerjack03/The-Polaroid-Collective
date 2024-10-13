@@ -78,7 +78,7 @@ header {
 }
 
 .largeText {
-    padding: 100px 0 100px 200px;
+    padding: 100px 0 100px 175px;
     font-size: 5em;
     font-family: "Dela Gothic One", sans-serif;
     background: linear-gradient(270deg, #ff69b4, #8a2be2, #da70d6); /* Pink and purple gradient */
@@ -97,8 +97,8 @@ header {
 
 .montageVideo {
     margin: 0;
-    padding-left: 200px;
-    width: 600px;
+    padding-left: 100px;
+    width: 500px;
     height: auto;
 }
 
