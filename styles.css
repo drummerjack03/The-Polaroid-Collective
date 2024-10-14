@@ -211,16 +211,24 @@ footer {
     color: #fff;
     text-decoration: none;
 }
-@media (max-width: 1500px) {
+@media (min-width: 768px) and (max-width: 1500px) {
+    .middleSection{
+        justify-content: center;
+    }
+
 .montageVideo {
-    display: none; /* Hides the video on mobile devices */
+    margin: 0;
+    width: 30%;
+    height: auto;
 }
 .largeText{
-    text-align: center; /* Center the text */
-    font-size: 275%; /* Adjusted font size for mobile */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Center the text */
+    font-size: 5vw;;
     padding: 3px;
-    margin: 0 auto; /* Center the element horizontally */
-
+    padding-right: 100px;
     font-family: "Dela Gothic One", sans-serif;
     background: linear-gradient(270deg, #ff69b4, #8a2be2, #da70d6); /* Pink and purple gradient */
     background-size: 300% 300%; /* Adjust size for smooth animation */
@@ -228,9 +236,13 @@ footer {
     -webkit-text-fill-color: transparent;
     animation: backgroundAnimate 8s ease infinite; /* Animation applied */
 }
+
 }
 /* Media query for mobile devices */
 @media (max-width: 768px) {
+    .montageVideo {
+        display: none; /* Hides the video on mobile devices */
+    }
     .event {
         flex-direction: column; /* Stack the content vertically */
         height: auto; /* Allow height to adjust based on content */
