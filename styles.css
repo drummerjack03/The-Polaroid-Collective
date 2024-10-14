@@ -73,12 +73,12 @@ header {
 .middleSection {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     background-color: #000000;
 }
 
 .largeText {
-    padding: 100px 0 100px 175px;
+    padding: 100px 0 100px 0;
     font-size: 5em;
     font-family: "Dela Gothic One", sans-serif;
     background: linear-gradient(270deg, #ff69b4, #8a2be2, #da70d6); /* Pink and purple gradient */
@@ -107,6 +107,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
 }
 
 .sectionTitle {
@@ -211,6 +212,7 @@ footer {
     color: #fff;
     text-decoration: none;
 }
+/*Adjusted viewport for desktops with smaller viewports*/
 @media (min-width: 768px) and (max-width: 1500px) {
     .middleSection{
         justify-content: center;
@@ -218,7 +220,7 @@ footer {
 
 .montageVideo {
     margin: 0;
-    width: 30%;
+    width: 34%;
     height: auto;
 }
 .largeText{
@@ -228,7 +230,6 @@ footer {
     text-align: left; /* Center the text */
     font-size: 5vw;;
     padding: 3px;
-    padding-right: 100px;
     font-family: "Dela Gothic One", sans-serif;
     background: linear-gradient(270deg, #ff69b4, #8a2be2, #da70d6); /* Pink and purple gradient */
     background-size: 300% 300%; /* Adjust size for smooth animation */
@@ -253,6 +254,7 @@ footer {
         width: 100%; /* Full width for mobile */
         border-radius: 10px; /* Rounded corners for mobile */
         padding: 10px; /* Reduce padding for smaller screens */
+        border-radius: 10px 10px 0 0; /* Combined border radius */
     }
 
     .rSide {
@@ -356,11 +358,54 @@ footer {
         -webkit-text-fill-color: transparent;
         animation: backgroundAnimate 8s ease infinite; /* Animation applied */
     }
+    .whoareWe {
+        
+        margin-top: 25px;
+    }
 
 }
 /* Make the hamburger icon invisible on wider screens */
 @media (min-width: 769px) {
     .hamburger {
         display: none; /* Hide hamburger icon on larger screens */
+    }
+}
+/*Adjustment for Event Containers*/
+@media (max-width: 1300px) and (min-width: 768px) {
+    .event {
+        flex-direction: row; /* Stack the content vertically */
+        height: auto; /* Allow height to adjust based on content */
+        width: 45%; /* Increase width for better mobile layout */
+        min-width: 530px;
+    }
+
+    .lSide {
+        width: 50%; /* Full width for mobile */
+        border-radius: 10px; /* Rounded corners for mobile */
+        padding: 10px; /* Reduce padding for smaller screens */
+        color: #ffffff;
+        border-radius: 10px 0 0 10px; /* Combined border radius */
+    }
+
+    .rSide {
+        width: 100%; /* Full width for mobile */
+        padding: 10px; /* Adjust padding */
+        align-items: center; /* Center-align the text on mobile */
+    }
+
+    .eventType, .eventTitle {
+        text-align: center; /* Center text on mobile for better readability */
+    }
+
+    .eventTitle {
+        font-size: 1.2em; /* Slightly smaller font for mobile */
+    }
+
+    .sectionTitle {
+        text-align: center;
+    }
+
+    .whoareWe p {
+        width: 75vw;
     }
 }
