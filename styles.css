@@ -24,6 +24,11 @@ header {
     top: 0; /* Stays at the top of the viewport */
     width: 100%; /* Ensures the navbar takes up the full width */
     z-index: 1000; /* Ensures the navbar stays on top of other elements */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .navbar {
@@ -44,6 +49,11 @@ header {
 
 .navbar img {
     margin-right: 20px;
+    padding-left: 20px;
+}
+.logo{
+    height: 60px;
+    width: auto;
 }
 
 .navElements, .navSocials {
@@ -125,13 +135,48 @@ header {
     text-align: center;
 }
 
+
 .members {
     background-color: #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
+    padding: 20px;
 }
+
+.slidable-gallery {
+    display: flex;
+    overflow-x: scroll; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Keeps the images in a row */
+    gap: 15px; /* Space between images */
+    scroll-behavior: smooth; /* Optional: Smooth scroll when using JS buttons */
+    padding: 20px 0;
+    width: 100%; /* Makes sure the gallery spans the entire width */
+}
+
+.slidable-gallery a {
+    flex: 0 0 auto; /* Prevents shrinking of items */
+}
+
+.slidable-gallery img {
+    max-width: 150px; /* Adjust the size of images */
+    height: auto;
+    border-radius: 10px; /* Adds rounded corners */
+}
+
+/* For mobile view, the gallery will slide */
+@media (max-width: 768px) {
+    .slidable-gallery {
+        -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS devices */
+    }
+}
+
+/* Hide the horizontal scrollbar on mobile for a cleaner look */
+.slidable-gallery::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in WebKit browsers */
+}
+
 
 #shows {
     background-color: #000000;
@@ -211,23 +256,7 @@ footer {
     font-family: "Abel", sans-serif;
 }
 
-.footSocials {
-    justify-content: center;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    padding-top: 20px;
-}
 
-.footSocials li {
-    margin: 0 3px;
-    padding: 0 5px; /* Combined padding */
-}
-
-.footSocials li a {
-    color: #fff;
-    text-decoration: none;
-}
 /*Adjusted viewport for desktops with smaller viewports*/
 @media (min-width: 768px) and (max-width: 1500px) {
     .middleSection{
@@ -379,6 +408,12 @@ footer {
         margin-top: 25px;
     }
 
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+
 }
 /* Make the hamburger icon invisible on wider screens */
 @media (min-width: 769px) {
@@ -425,3 +460,37 @@ footer {
         width: 75vw;
     }
 }
+
+/*Adjusted viewport for desktops with smaller viewports*/
+@media (max-width: 1100px){
+    .logo{
+        display: none;
+    }
+}
+
+.email{
+    color: #fff;
+    text-decoration: none;
+    font-family: "Abel", sans-serif; /* Match the navbar font */
+}
+.email:hover {
+    text-decoration: underline;
+}
+
+.footSocials {
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.footSocials li {
+    margin: 0 3px;
+    padding: 0 5px; /* Combined padding */
+}
+
+.footSocials li a {
+    color: #fff;
+    text-decoration: none;
+}
+
