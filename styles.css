@@ -24,7 +24,7 @@ header {
     top: 0; /* Stays at the top of the viewport */
     width: 100%; /* Ensures the navbar takes up the full width */
     z-index: 1000; /* Ensures the navbar stays on top of other elements */
-    height: 100px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,8 +34,9 @@ header {
 .navbar {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: space-between;
     flex-direction: column;
+    width: 100%;
 }
 
 .navbar nav {
@@ -66,7 +67,7 @@ header {
     justify-content: center; 
 }
 
-.navElements li, .navSocials li {
+.navElements li {
     margin: 0 15px; /* Use margin for navElements and margin for navSocials */
 }
 
@@ -144,31 +145,35 @@ header {
     margin-top: 50px;
     padding: 20px;
 }
-
-.slidable-gallery {
-    display: flex;
-    overflow-x: scroll; /* Enables horizontal scrolling */
-    white-space: nowrap; /* Keeps the images in a row */
-    gap: 15px; /* Space between images */
-    scroll-behavior: smooth; /* Optional: Smooth scroll when using JS buttons */
-    padding: 20px 0;
-    width: 100%; /* Makes sure the gallery spans the entire width */
+.slidable-gallery img{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.slidable-gallery a {
-    flex: 0 0 auto; /* Prevents shrinking of items */
-}
 
-.slidable-gallery img {
-    max-width: 150px; /* Adjust the size of images */
-    height: auto;
-    border-radius: 10px; /* Adds rounded corners */
-}
 
 /* For mobile view, the gallery will slide */
-@media (max-width: 768px) {
+@media (max-width: 1010px) {
+    /* Remove horizontal scrolling and change layout for mobile */
     .slidable-gallery {
-        -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS devices */
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap into new lines */
+        justify-content: center; /* Center the items */
+        gap: 15px; /* Maintain spacing between items */
+        padding: 20px 0;
+        width: 100%; /* Ensure it spans the full width */
+        overflow: visible; /* Remove side scrolling */
+    }
+
+    .slidable-gallery a {
+        flex: 0 0 25%; /* Adjust width so two items fit per row */
+        max-width: 25%; /* Ensure the images don’t exceed this width */
+        margin-bottom: 20px; /* Adds space below each pair */
+    }
+
+    .slidable-gallery img {
+        width: 100%; /* Make sure images take the full width of their container */
+        height: auto;
     }
 }
 
@@ -240,7 +245,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 footer {
@@ -323,7 +328,14 @@ footer {
     .whoareWe p {
         width: 75vw;
     }
-
+    .navbar nav{
+        display: flex;
+        justify-content: center; /* Centers the hamburger icon */
+        align-items: center;
+        width: 100%; /* Ensures it spans the full width */
+        max-width: 1200px; /* Optional to limit width */
+        margin: 0 auto;
+    }
     .navbar .navSocials {
         display: none;
     }
@@ -353,13 +365,8 @@ footer {
     }
 
     .hamburger {
-        display: block; /* Show hamburger icon */
-        background-color: transparent; /* Transparent background */
-        border: none; /* Remove border */
-        color: white; /* Hamburger icon color */
-        font-size: 2em; /* Size of the hamburger icon */
-        padding: 10px 15px; /* Add padding to the hamburger */
-        cursor: pointer; /* Change cursor to pointer on hover */
+        font-size: 30px; /* Optional: Adjust the size of the hamburger icon */
+        cursor: pointer;
     }
 
     .navElements.active {
@@ -413,6 +420,13 @@ footer {
         flex-direction: row;
         justify-content: end;
     }
+    .slidable-gallery a {
+        flex: 0 0 45%; /* Adjust width so two items fit per row */
+        max-width: 45%; /* Ensure the images don’t exceed this width */
+        margin-bottom: 20px; /* Adds space below each pair */
+    }
+
+
 
 }
 /* Make the hamburger icon invisible on wider screens */
@@ -421,6 +435,7 @@ footer {
         display: none; /* Hide hamburger icon on larger screens */
     }
 }
+
 /*Adjustment for Event Containers*/
 @media (max-width: 1300px) and (min-width: 768px) {
     .event {
@@ -500,4 +515,69 @@ footer {
 }
 .whoareWe a:hover{
     color:#cccccc;
+}
+/* Disable clicking for the 'Music' item */
+.coming-soon {
+    position: relative; /* Enables positioning of the hover bubble */
+}
+
+/* Hover effect to show a speech bubble */
+.coming-soon:hover::after {
+    content: 'Coming soon!';
+    position: absolute;
+    top: 35px; /* Adjusted to position the bubble below the 'Music' item */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff69b4; /* Pink bubble color */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px; /* Creates a bubble effect */
+    white-space: nowrap;
+    font-size: 0.9em;
+    z-index: 1000;
+    opacity: 0.9; /* Slight transparency */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+/* Adding a little triangle (speech bubble tail) */
+.coming-soon:hover::before {
+    content: '';
+    position: absolute;
+    top: 25px; /* Adjusted to position the triangle just above the bubble */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px 8px 0 8px; /* Triangle dimensions */
+    border-style: solid;
+    border-color: #ff69b4 transparent transparent transparent; /* Pink triangle */
+    z-index: 1000;
+}
+.members a{
+    text-decoration: none;
+}
+#merch p{
+    color: #dfdfdf;
+    font-size: 30px;
+    max-width: 800px;
+    font-family: "Abel", sans-serif;
+    text-align: center;
+}
+.shirts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.shirts li{
+    padding: 10px;
+}
+.shirts a{
+    text-decoration: none;
+}
+
+@media (max-width: 550px){
+    .shirts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
 }
