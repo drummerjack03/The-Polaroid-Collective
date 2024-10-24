@@ -156,8 +156,8 @@ header {
     max-width: 300px;
     max-height: 275px;
     object-fit: cover; /* Ensures the image covers the area without distortion */
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
