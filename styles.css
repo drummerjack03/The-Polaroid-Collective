@@ -153,7 +153,9 @@ header {
     flex-wrap: wrap; /* Allows the images to wrap if the screen is too small */
 }
 .slidable-gallery img{
-    max-width: 275px;
+    max-width: 300px;
+    max-height: 275px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
     padding-left: 20px;
     padding-right: 20px;
 }
