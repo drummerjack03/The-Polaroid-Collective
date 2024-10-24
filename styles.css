@@ -145,7 +145,15 @@ header {
     margin-top: 50px;
     padding: 20px;
 }
+
+.slidable-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Aligns the images in the center */
+    flex-wrap: wrap; /* Allows the images to wrap if the screen is too small */
+}
 .slidable-gallery img{
+    max-width: 275px;
     padding-left: 20px;
     padding-right: 20px;
 }
