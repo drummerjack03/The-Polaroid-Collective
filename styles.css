@@ -353,7 +353,7 @@ footer {
         display: none; /* Hide navigation links by default */
         flex-direction: column; /* Stack links vertically */
         position: absolute; /* Overlay the menu */
-        top: 100px; /* Below the header */
+        top: 50px; /* Below the header */
         right: 0; /* Align to the right */
         background-color: #111; /* Background color for dropdown */
         width: 100%; /* Full width for mobile */
