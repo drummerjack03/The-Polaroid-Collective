@@ -190,6 +190,12 @@ header {
     display: none; /* Hides scrollbar in WebKit browsers */
 }
 
+.music{
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
 
 #shows {
     background-color: #000000;
@@ -562,6 +568,7 @@ footer {
 .members a{
     text-decoration: none;
 }
+
 #merch p{
     color: #dfdfdf;
     font-size: 30px;
