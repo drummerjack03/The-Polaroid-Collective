@@ -190,8 +190,9 @@ header {
     display: none; /* Hides scrollbar in WebKit browsers */
 }
 
-.music{
+#music{
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
 }
