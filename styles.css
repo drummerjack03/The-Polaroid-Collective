@@ -440,6 +440,10 @@ footer {
         max-width: 45%; /* Ensure the images don’t exceed this width */
         margin-bottom: 20px; /* Adds space below each pair */
     }
+    iframe{
+        width: 70%;
+        height: 200px;
+    }
 
 
 
